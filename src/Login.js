@@ -26,25 +26,29 @@ async function loginUser(credentials) {
    }
  
    return(
-     <div className="login-wrapper">
-       <h1>Please Log In</h1>
-       <form onSubmit={handleSubmit}>
-         <label>
-           <p>Username</p>
+     <div>
+       <form  className="form" onSubmit={handleSubmit}>
+       <div>
+       <h1>Log In</h1>
+       </div>
+         <div>
+          <label htmlFor="email">Email address</label>
            <input 
               type="email" 
               placeholder="Enter Email"
-              onChange={e => setEmail(e.target.value)} />
-         </label>
-         <label>
-           <p>Password</p>
+              onChange={e => setEmail(e.target.value)} >
+                </input>
+         </div>
+         <div>
+         <label htmlFor="password">Password</label>
            <input 
               type="password" 
               placeholder="Enter Password"
-              onChange={e => setPassword(e.target.value)} />
-         </label>
+              onChange={e => setPassword(e.target.value)}>
+                </input>
+         </div>
          <div>
-           <button type="submit">Submit</button>
+           <button className="primary"type="submit">Submit</button>
          </div>
           <label>
             <div>

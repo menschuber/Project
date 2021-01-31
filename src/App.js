@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Link, Route} from 'react-router-dom';
 import Dashboard from './Dash.js';
 import Private from './Private.js';
 import Login from './Login.js';
@@ -13,14 +13,23 @@ function App() {
   }
   return (
       <BrowserRouter>
-        <Switch>
+      <div className="grid-container">
+      <header className="row">
+      <div>
+            <Link className="brand" to="/">
+              NameWebsite
+            </Link>
+      </div>
+      </header>
+      <main>
           <Route path="/Dashboard">
             <Dashboard />
           </Route>
           <Route path="/Private">
             <Private />
           </Route>
-        </Switch>
+        </main>
+        </div>
       </BrowserRouter>
   );
 }
