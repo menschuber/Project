@@ -12,8 +12,6 @@ function App() {
     return <Login setToken={setToken} />
   }
   return (
-    <div className="wrapper">
-      <h1>Application</h1>
       <BrowserRouter>
         <Switch>
           <Route path="/Dashboard">
@@ -24,7 +22,6 @@ function App() {
           </Route>
         </Switch>
       </BrowserRouter>
-    </div>
   );
 }
 
